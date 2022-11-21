@@ -1,0 +1,32 @@
+.header {
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.header > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: min(20em, 96%);
+  gap: 1em;
+}
+
+.header > ul > li > *{
+    font-size: 1.25em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.header > ul > li >*:hover {
+    color: rgb(67, 68, 80);
+}

@@ -1,0 +1,63 @@
+.gridContainer {
+  padding-top: 6em;
+  padding-bottom: 2em;
+  width: 80%;
+  min-height: 100vh;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10em);
+  grid-auto-rows: auto;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.smallCards {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 10em;
+  height: 8em;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.smallCards:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: rgb(223, 9, 9);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  padding: 0.25em;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.icon:hover {
+  border: 1px solid rgb(223, 9, 9);
+  padding: 0.15em;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 6em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.container > h1 {
+  opacity: 0.25;
+}
