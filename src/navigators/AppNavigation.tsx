@@ -6,6 +6,11 @@ import Spell from "../screens/spellPage/Spell";
 
 const routes = [
   {
+    path: '/',
+    component: <Navigate to="/api/spells" />,
+    index: true
+  },
+  {
     path: '/favourites',
     component: <Favourites />
   },
@@ -26,8 +31,7 @@ const AppNavigation: React.FC<any> = () => {
   return (
     <>
       <Routes>
-        <Route index path="/" element={<Navigate to="/api/spells" />} />
-        {routes.map(({ path, component }) => <Route path={path} element={component} />)}
+        {routes.map(({ index = false, path, component }, idx: React.Key) => <Route index={index} key={idx} path={path} element={component} />)}
       </Routes>
     </>
   );
